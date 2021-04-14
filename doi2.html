@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>sweet alert</title>
+
+  <style>
+
+body{
+  background-color: #c2f2ff;
+}
+
+  </style>
+
+</head>
+<body>
+
+</body>
+<script src="dist/sweetalert2.all.min.js"></script>
+<script>
+
+const { value: text } = await Swal.fire({
+  input: 'textarea',
+  inputLabel: 'Message',
+  inputPlaceholder: 'Type your message here...',
+  inputAttributes: {
+    'aria-label': 'Type your message here'
+  },
+  showCancelButton: true
+})
+
+if (text) {
+  Swal.fire(text)
+}
+
+</script>
+</html>
